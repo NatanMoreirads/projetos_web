@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tabela</title>
+        <link rel="stelysheet" href="estilo.css">
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Adcionar Aluno</legend>
+                <label for="aluno">Aluno: </label>
+                <input type="text" id="aluno" />
+                <input type="button"  value="Adicionar" onclick="adicionar()" />
+            </fieldset>
+        </form>
+        <table border="1" width="100%">
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Turma</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Gabriel</td>
+                <td>INFO-01</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>2</td>
+                <td>Peterson</td>
+                <td>INFO-01</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function adicionar(){
+                let aluno   =   document.getElementById('aluno').value;
+                const turma = 'INFO-01';
+
+                let tr  =   document.createElement('tr');
+                let td_id   =   document.createElement
+                ('td');
+                let td_aluno    =   document.createElement('td');
+                let td_turma    =   document.createElement('td');
+
+                td_id.innerHTML = '';
+                td_aluno.innerHTML = aluno;
+                td_turma.innerHTML = turma;
+
+                tr.appendChild(td_id);
+                tr.appendChild(td_aluno);
+                tr.appendChild(td_turma);
+
+                document.getElementsByTagName('table') [0].appendChild(tr);
+            }
+        </script>
+    </body>
+</html>
